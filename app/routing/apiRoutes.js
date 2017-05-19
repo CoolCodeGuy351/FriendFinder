@@ -1,21 +1,26 @@
 var friendsData = require("../data/friends.js");
+var path = require('path');
 
 module.exports = function(app) {
 
   app.get("/api/friends", function(req, res) {
-    res.json(friendsData);
+  res.json(friendsData);
   });
 
   app.post("/api/friends", function(req, res) {
       friendsData.push(req.body);
+      res.redirect("/survey");
+      // return friendsData[0];
   });
 
-  // app.post("/api/clear", function() {
-  //   // Empty out the arrays of data
-  //   tableData = [];
-  //   waitListData = [];
+  var match;
 
-  //   console.log(tableData);
-  // });
+  // for(var i = 0; i < friendsData.length ; i++){
+  // console.log(friendsData)
+  // }
+  return friendsData[0];
+
 
 };
+
+
