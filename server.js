@@ -18,9 +18,4 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 htmlRoute(app);
 apiRoute(app);
 
-// $('#submitButtonId').click(function(){
-//   console.log(this);
-// });
-
-
 app.listen(PORT, () => console.log("App listening on port " + PORT));
