@@ -10,14 +10,12 @@ module.exports = function(app) {
   app.post("/api/friends", function(req, res) {
       friendsData.push(req.body);
       res.redirect("/survey");
-      // return friendsData[0];
+
   });
 
   var match;
 
-  // for(var i = 0; i < friendsData.length ; i++){
-  // console.log(friendsData)
-  // }
+
   return friendsData[0];
 
 
